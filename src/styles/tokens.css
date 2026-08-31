@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'Shantell Sans';
+  src: url('/fonts/shantell-sans-regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Shantell Sans';
+  src: url('/fonts/shantell-sans-italic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 300 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DM Mono';
+  src: url('/fonts/dm-mono-regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  --paper: #f3ecd9;
+  --paper-deep: #dfd2b7;
+  --paper-bright: #fffaf0;
+  --ink: #24211d;
+  --ink-soft: #514c44;
+  --pencil: #777064;
+  --rule: #b9ad94;
+  --rust: #c84f3f;
+  --blue: #335b98;
+  --marigold: #dda329;
+  --moss: #56705b;
+  --shadow: rgba(36, 33, 29, 0.16);
+  --display: 'Shantell Sans', 'Comic Sans MS', cursive;
+  --mono: 'DM Mono', 'Courier New', monospace;
+  --page-width: 84rem;
+  --gutter: clamp(1rem, 4vw, 4rem);
+  --line: 1px solid var(--rule);
+}
+
+html[data-theme='night'] {
+  color-scheme: dark;
+  --paper: #191a17;
+  --paper-deep: #292a24;
+  --paper-bright: #20211d;
+  --ink: #eee5d2;
+  --ink-soft: #c5baa5;
+  --pencil: #a89d88;
+  --rule: #575447;
+  --rust: #f17a66;
+  --blue: #84a5db;
+  --marigold: #f1bd52;
+  --moss: #8cb095;
+  --shadow: rgba(0, 0, 0, 0.35);
+}
