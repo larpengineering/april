@@ -15,7 +15,7 @@ test('the public identity stays honest and specific', async () => {
 
 test('all authored custom elements are registered and mounted', async () => {
   const [html, main] = await Promise.all([read('index.html'), read('src/main.ts')])
-  const tags = ['april-sigil', 'paper-switch', 'principle-deck', 'claim-check', 'tension-stack', 'curiosity-field', 'margin-thread']
+  const tags = ['april-sigil', 'principle-deck', 'claim-check', 'tension-stack', 'curiosity-field', 'margin-thread']
   for (const tag of tags) {
     assert.match(html, new RegExp(`<${tag}`), `${tag} is mounted`)
     assert.match(main, new RegExp(`customElements\\.define\\('${tag}'`), `${tag} is registered`)

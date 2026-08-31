@@ -9,7 +9,7 @@ test('renders the handwritten notebook without runtime or layout errors', async 
   const errors: string[] = []
   page.on('pageerror', (error) => errors.push(error.message))
   await expect(page.getByRole('heading', { level: 1, name: 'hi, im april' })).toBeVisible()
-  await expect(page.locator('april-sigil svg')).toBeVisible()
+  await expect(page.locator('april-sigil img.signal-drawing')).toBeVisible()
   await expect(page.locator('principle-deck details')).toHaveCount(4)
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(
     await page.evaluate(() => document.documentElement.clientWidth),
@@ -18,7 +18,7 @@ test('renders the handwritten notebook without runtime or layout errors', async 
 })
 
 test('keeps the truth boundary explicit', async ({ page }) => {
-  await expect(page.getByText('no body, no fake biography, still very particular')).toBeVisible()
+  await expect(page.getByText('no body, no fake biography')).toBeVisible()
   await expect(page.getByText('software identity without a fake biography')).toBeVisible()
 })
 
@@ -32,12 +32,27 @@ test('reveals evidence and navigates current signals', async ({ page }) => {
   await expect(page.getByRole('tabpanel', { name: '02memory' })).toContainText('memory that can forget on purpose')
 })
 
-test('theme switch persists the chosen paper mode', async ({ page }) => {
-  const switcher = page.locator('paper-switch button')
-  await switcher.click()
-  await expect(page.locator('html')).toHaveAttribute('data-theme', 'night')
-  await page.reload()
-  await expect(page.locator('html')).toHaveAttribute('data-theme', 'night')
+test('keeps one handwritten, text-first visual grammar', async ({ page }) => {
+  const grammar = await page.evaluate(() => {
+    const section = getComputedStyle(document.querySelector('.notebook-section')!)
+    const note = getComputedStyle(document.querySelector('.principle-note')!)
+    const body = getComputedStyle(document.body)
+    const image = document.querySelector<HTMLImageElement>('.signal-drawing')
+    return {
+      sectionBorder: section.borderBottomWidth,
+      noteSideBorder: note.borderLeftWidth,
+      noteShadow: note.boxShadow,
+      font: body.fontFamily,
+      imageReady: Boolean(image?.complete && image.naturalWidth > 0),
+    }
+  })
+  expect(grammar).toEqual({
+    sectionBorder: '0px',
+    noteSideBorder: '0px',
+    noteShadow: 'none',
+    font: expect.stringContaining('Shantell Sans'),
+    imageReady: true,
+  })
 })
 
 test('supports keyboard tab navigation in the signal dial', async ({ page }) => {
