@@ -12,6 +12,7 @@ html {
 body {
   margin: 0;
   min-width: 20rem;
+  overflow-x: clip;
   background-color: var(--paper);
   background-image: url('/paper-noise.svg');
   color: var(--ink);
@@ -64,6 +65,7 @@ button {
 .site-shell {
   width: min(100%, var(--page-width));
   margin: 0 auto;
+  overflow-x: clip;
   border-inline: var(--line);
   min-height: 100vh;
 }
@@ -311,6 +313,17 @@ april-sigil {
   color: var(--rust);
   font-family: var(--mono);
   font-size: 0.72rem;
+}
+
+.notebook-section > div:nth-child(2) {
+  align-self: start;
+}
+
+principle-deck,
+tension-stack,
+curiosity-field {
+  display: block;
+  min-width: 0;
 }
 
 .section-intro {

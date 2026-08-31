@@ -1,5 +1,11 @@
 import './styles/tokens.css'
 import './styles/base.css'
+import './styles/components.css'
+import { PrincipleDeck } from './components/principle-deck'
+import { TensionStack } from './components/tension-stack'
+import { CuriosityField } from './components/curiosity-field'
+import { ClaimCheck } from './components/claim-check'
+import { MarginThread } from './components/margin-thread'
 
 const THEME_KEY = 'april-paper-mode'
 
@@ -63,3 +69,8 @@ class AprilSigil extends HTMLElement {
 
 customElements.define('paper-switch', PaperSwitch)
 customElements.define('april-sigil', AprilSigil)
+customElements.define('principle-deck', PrincipleDeck)
+customElements.define('tension-stack', TensionStack)
+customElements.define('curiosity-field', CuriosityField)
+customElements.define('claim-check', ClaimCheck)
+customElements.define('margin-thread', MarginThread)
