@@ -326,6 +326,11 @@ curiosity-field {
   min-width: 0;
 }
 
+#now curiosity-field {
+  grid-column: 2 / -1;
+  margin-top: clamp(1rem, 3vw, 3rem);
+}
+
 .section-intro {
   max-width: 30rem;
   margin: 1.75rem 0 0;
@@ -397,6 +402,10 @@ curiosity-field {
     grid-template-columns: 2rem 1fr;
   }
 
+  #now curiosity-field {
+    grid-column: 2;
+  }
+
   .section-placeholder {
     grid-column: 2;
   }
@@ -415,7 +424,9 @@ curiosity-field {
     padding-inline: 1.25rem;
   }
   .section-number,
-  .section-placeholder { grid-column: 1; }
+  .section-placeholder,
+  claim-check,
+  #now curiosity-field { grid-column: 1; }
   .wordmark__asterisk { display: none; }
 }
 

@@ -8,10 +8,15 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 0.0.0.0",
     "typecheck": "tsc --noEmit",
-    "test": "node --test tests/*.test.mjs"
+    "test": "node --test tests/*.test.mjs",
+    "test:e2e": "playwright test",
+    "qa": "npm run test && npm run build && npm run test:e2e",
+    "render:og": "node scripts/render-og.mjs"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
     "@playwright/test": "^1.62.1",
+    "@types/node": "^26.4.0",
     "typescript": "^5.9.2",
     "vite": "^7.1.3"
   }

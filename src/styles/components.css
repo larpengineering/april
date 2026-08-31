@@ -232,6 +232,7 @@ claim-check:not(.is-open) .claim-check {
 .curiosity-field__dial button:nth-of-type(2) { margin: 9rem 0 0 auto; transform: rotate(1.5deg); }
 .curiosity-field__dial button:nth-of-type(3) { margin: 7rem 0 0 12%; transform: rotate(-1deg); }
 .curiosity-field__dial button[aria-selected='true'] { background: var(--ink); color: var(--paper); box-shadow: 0.28rem 0.35rem 0 var(--rust); }
+.curiosity-field__dial button[aria-selected='true'] span { color: var(--paper-deep); }
 
 .curiosity-field__pages article {
   position: relative;
@@ -293,6 +294,7 @@ margin-thread {
 }
 
 @media (max-width: 40rem) {
+  claim-check { grid-column: 1; }
   .principle-note summary { grid-template-columns: 2rem 2.7rem 1fr; gap: 0.7rem; }
   .principle-note__short { grid-column: 2 / -1; }
   .principle-note > p { margin-left: 1.2rem; }

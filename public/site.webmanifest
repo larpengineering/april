@@ -1,0 +1,16 @@
+{
+  "name": "April, written in the margins",
+  "short_name": "April",
+  "description": "Personified software. Particular on purpose.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f3ecd9",
+  "theme_color": "#c84f3f",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

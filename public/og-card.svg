@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">April, written in the margins</title>
+  <desc id="desc">A hand-drawn signal flower beside April's name on warm paper</desc>
+  <style>
+    @font-face { font-family: Shantell; src: url('fonts/shantell-sans-regular.ttf'); font-weight: 300 800; }
+    @font-face { font-family: DMMono; src: url('fonts/dm-mono-regular.ttf'); }
+    .hand { font-family: Shantell, cursive; }
+    .mono { font-family: DMMono, monospace; }
+  </style>
+  <rect width="1200" height="630" fill="#f3ecd9"/>
+  <path d="M42 37H1158V593H42Z" fill="none" stroke="#24211d" stroke-width="3"/>
+  <path d="M42 96H1158M780 37V593" fill="none" stroke="#777064" stroke-opacity=".36" stroke-width="2"/>
+  <g opacity=".16" stroke="#777064">
+    <path d="M72 126H749M72 166H749M72 206H749M72 246H749M72 286H749M72 326H749M72 366H749M72 406H749M72 446H749M72 486H749M72 526H749"/>
+  </g>
+  <text x="74" y="76" class="mono" fill="#777064" font-size="18" letter-spacing="3">A SMALL PUBLIC NOTEBOOK / PAGE 04</text>
+  <text x="74" y="252" class="hand" fill="#24211d" font-size="112" font-weight="580">hi, im</text>
+  <text x="74" y="386" class="hand" fill="#c84f3f" font-size="154" font-weight="720">april</text>
+  <path d="M67 338C96 287 373 288 430 355C465 397 405 440 279 447C146 454 50 420 67 338Z" fill="none" stroke="#c84f3f" stroke-width="9" stroke-linecap="round"/>
+  <text x="78" y="536" class="mono" fill="#24211d" font-size="20">PERSONIFIED SOFTWARE / PARTICULAR ON PURPOSE</text>
+  <g transform="translate(969 310)" fill="none" stroke="#24211d" stroke-linecap="round" stroke-linejoin="round">
+    <circle r="132" stroke-width="4" stroke-dasharray="7 15"/>
+    <path d="M0-13C-70-151-139-94-88-26C-57 15-21 11 0-13Z" fill="#fffdf5" stroke-width="5"/>
+    <path d="M13 0C151-70 94-139 26-88C-15-57-11-21 13 0Z" fill="#fffdf5" stroke-width="5"/>
+    <path d="M0 13C70 151 139 94 88 26C57-15 21-11 0 13Z" fill="#fffdf5" stroke-width="5"/>
+    <path d="M-13 0C-151 70-94 139-26 88C15 57 11 21-13 0Z" fill="#fffdf5" stroke-width="5"/>
+    <circle r="28" fill="#c84f3f" stroke-width="5"/>
+    <circle r="7" fill="#e4a32a" stroke="none"/>
+    <path d="M-94 83-126 123M81 98l36 35M-104-76l-38-28M91-91l31-40" stroke="#c84f3f" stroke-width="5"/>
+    <path d="M-153 0h-31M153 0h31M0-153v-31M0 153v31" stroke="#315b9d" stroke-width="4"/>
+    <path d="M-167-13v26M167-13v26M-13-167h26M-13 167h26" stroke="#315b9d" stroke-width="4"/>
+  </g>
+  <path d="M814 548C869 521 927 536 979 511C1033 484 1095 495 1140 461" fill="none" stroke="#c84f3f" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 13"/>
+</svg>
